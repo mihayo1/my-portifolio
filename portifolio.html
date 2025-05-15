@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Vumilia Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#survey">Survey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>My<br>Portfolio</h1>
+      <p>Unapologetically sleek & unique. I craft interactive, fashion-forward, and all-around beautiful experiences that do more than just stand out.</p>
+      <button onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });">Explore More</button>
+    </div>
+    <div class="hero-image">
+      <img src="assets/v.png" alt="Portfolio Photo">
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About Vumilia Mihayo</h2>
+    <p>Hi! I'm Vumilia Mihayo, currently studying at the University of Dodoma, Tanzania. I'm passionate about combining creativity with technology, and I've worked on several exciting projects in video editing, instructional design, and information technology. My goal is to create meaningful digital experiences that educate, inspire, and connect.</p>
+  </section>
+
+  <section id="portfolio" class="portfolio-section">
+    <h2>Projects</h2>
+    <p>Check out some of the projects I've been working on:</p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="assets/11.jpeg" alt="Learning App">
+        <h3>Interactive Learning App</h3>
+        <p>A mobile-first educational app built using Flutter to help kids learn through games and stories.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/22.jpeg" alt="Video Series">
+        <h3>Instructional Video Series</h3>
+        <p>Produced and edited a series of videos teaching digital literacy for adult learners.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/33.jpg" alt="UX Case Study">
+        <h3>UX Case Study</h3>
+        <p>Redesigned a local NGO’s website to improve accessibility and engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="survey">
+    <h2>Feedback Survey</h2>
+    <form onsubmit="event.preventDefault(); showPopup();">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="feedback">What did you like most?</label><br>
+      <textarea id="feedback" name="feedback" rows="4" cols="40" required></textarea><br><br>
+      <button type="submit">Send Feedback</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me via:</p>
+    <p>Email: masanjavumilia239@gmail.com</p>
+    <p>Phone: +255 762 329 097</p>
+    <p>Location: Dodoma, Tanzania</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vumilia Mihayo. All Rights Reserved.</p>
+  </footer>
+
+  <div id="popup" class="popup" style="display:none;">
+    <h2 style="color: #27ae60;">Feedback Sent!</h2>
+    <p>Thanks for the Feedback Survey! We'll keep making Cool Stuffs</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
